@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BasicAnimationDemo.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="10"
+            Spacing="25">
+
+            <Label Text="Fade Animation" FontSize="28"/>
+            <Image x:Name="imgFade"
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="100">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_ForFadeAnimation"/>
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Label Text="Rotation Animation" FontSize="28"/>
+            <HorizontalStackLayout Spacing="10">
+                <Image x:Name="imgRotation"
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="100"
+                HorizontalOptions="Center">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_ForRotateAnimation"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image x:Name="imgVRotation"
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="100"
+                HorizontalOptions="Center">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_ForVRotateAnimation"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image x:Name="imgHRotation"
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="100"
+                HorizontalOptions="Center">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_ForHRotateAnimation"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </HorizontalStackLayout>
+
+            <Label Text="Scale Animation" FontSize="28"/>
+            <Image x:Name="imgScale"
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="100"
+                HorizontalOptions="Center">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_ForScaleAnimation"/>
+                </Image.GestureRecognizers>
+            </Image>
+            
+            <Label Text="Translate Animation" FontSize="28"/>
+            <Image x:Name="imgTranslate"
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="100"
+                HorizontalOptions="Center">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_ForTranslateAnimation"/>
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Button Text="Start animation" Clicked="Button_Clicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
